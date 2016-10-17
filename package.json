@@ -1,5 +1,5 @@
 {
-  "name": "nanotime",
+  "name": "nano-time",
   "version": "1.0.0",
   "description": "Current Time in Nanoseconds",
   "main": "index.js",

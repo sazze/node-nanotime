@@ -9,7 +9,7 @@ In node.js you can get high resolution time with `process.hrtime()`, but it is f
 Since javascript can't hold a nanosecond as an INT safely (_Number.MAX_SAFE_INTEGER_), we return a string instead.
 
 ```js
-const now = require('nanotime');
+const now = require('nano-time');
 
 now(); // '1476742925219947761' (returns a string)
 now.micro(); // '1476742921398373'
