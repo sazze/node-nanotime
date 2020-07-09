@@ -1,17 +1,19 @@
 'use strict';
 
-const BigInt = require('big-integer');
-
 const loadNs = process.hrtime();
 const loadMs = new Date().getTime();
 
+const MILLION = BigInt(1e6);
+const BILLION = BigInt(1e9);
+const THOUSAND = BigInt(1e3);
+
 function nanoseconds() {
-  let diffNs = process.hrtime(loadNs);
-  return BigInt(loadMs).times(1e6).add(BigInt(diffNs[0]).times(1e9).plus(diffNs[1])).toString();
+    let diffNs = process.hrtime(loadNs);
+    return String(BigInt(loadMs) * MILLION + (BigInt(diffNs[0]) * BILLION + BigInt(diffNs[1])));
 }
 
 function microseconds() {
-  return BigInt(nanoseconds()).divide(1e3).toString();
+    return String(BigInt(nanoseconds()) / THOUSAND);
 }
 
 module.exports = nanoseconds;

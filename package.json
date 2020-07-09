@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/sazze/node-nanotime/issues"
   },
-  "homepage": "https://github.com/sazze/node-nanotime#readme",
-  "dependencies": {
-    "big-integer": "^1.6.16"
-  }
+  "homepage": "https://github.com/sazze/node-nanotime#readme"
 }
